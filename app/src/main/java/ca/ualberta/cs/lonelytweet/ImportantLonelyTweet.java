@@ -14,12 +14,9 @@ public class ImportantLonelyTweet extends LonelyTweet {
 
 	@Override
 	public boolean isValid() {
-		if (tweetBody.trim().length() == 0
-				|| tweetBody.trim().length() > 20) {
-			return false;
-		}
+		return !(tweetBody.trim().length() == 0
+				|| tweetBody.trim().length() > 20); //simplified to address redundant if
 
-		return true;
 	}
 
 	@Override
